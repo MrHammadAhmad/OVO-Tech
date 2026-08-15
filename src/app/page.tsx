@@ -220,7 +220,7 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden">
       {/* 1. HERO SECTION */}
-      <section className="relative pt-6 pb-12 lg:pt-10 lg:pb-16 bg-[#f8fafc] border-b border-brand-border overflow-hidden">
+      <section className="relative pt-6 pb-0 lg:pt-10 lg:pb-0 bg-[#f8fafc] border-b border-brand-border overflow-hidden">
         {/* Glow Effects */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -298,8 +298,8 @@ export default function HomePage() {
             </div>
 
             {/* Hero Visual Mockup (Right) */}
-            <div className="lg:col-span-5 relative flex items-center justify-center">
-              <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[420px] md:h-[420px] lg:w-[460px] lg:h-[460px] xl:w-[500px] xl:h-[500px] transform lg:-translate-y-2 xl:-translate-y-3">
+            <div className="lg:col-span-5 relative flex items-end justify-center self-end">
+              <div className="relative w-96 h-96 sm:w-[460px] sm:h-[460px] md:w-[500px] md:h-[500px] lg:w-[500px] lg:h-[500px] xl:w-[620px] xl:h-[620px]">
                 {/* SVG Static Curved Text & Circle Backdrop */}
                 <div className="absolute inset-0 z-0 select-none">
                   <svg className="w-full h-full filter drop-shadow-[0_8px_32px_rgba(16,32,57,0.3)]" viewBox="0 0 200 200">
@@ -322,341 +322,331 @@ export default function HomePage() {
                     <circle cx="100" cy="110" r="80" fill="#02ACEA" />
 
                     {/* Left Text (Screenshot 3 text) */}
-                    <text className="text-[4.2px] font-black fill-[#0F1E36] tracking-[0.25em] uppercase">
-                      <textPath href="#leftPath" startOffset="50%" textAnchor="middle">
-                        CLINICALLY COMPLIANT • SECURE & TRUSTED • RPA FOR HEALTHCARE
-                      </textPath>
-                    </text>
 
-                    {/* Right Text (Screenshot 4 text) */}
-                    <text className="text-[4.2px] font-black fill-[#0F1E36] tracking-[0.25em] uppercase">
-                      <textPath href="#rightPath" startOffset="50%" textAnchor="middle">
-                        DESIGNED FOR CLINICIANS • BUILT FOR SAFETY
-                      </textPath>
-                    </text>
-                  </svg>
-                </div>
+                  </text>
+                </svg>
+              </div>
 
-                {/* Friendly male doctor image standing on top */}
-                <div className="absolute inset-0 flex items-end justify-center z-10 pointer-events-none">
-                  <TransparentDoctorImage />
-                </div>
+              {/* Friendly male doctor image standing on top */}
+              <div className="absolute inset-0 flex items-end justify-center z-10 pointer-events-none">
+                <TransparentDoctorImage />
+              </div>
 
-                {/* Floating Outline Icons matching reference (no white boxes) */}
-                <div className="absolute top-[34%] left-[2%] z-20 animate-bounce opacity-80 pointer-events-none">
-                  <Rocket className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
-                </div>
-                <div className="absolute top-[34%] right-[2%] z-20 animate-[pulse_3.5s_infinite] opacity-80 pointer-events-none">
-                  <Brain className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
-                </div>
-                <div className="absolute top-[16%] left-[24%] z-20 opacity-80 pointer-events-none">
-                  <Cloud className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
-                </div>
+              {/* Floating Outline Icons matching reference (no white boxes) */}
+              <div className="absolute top-[34%] left-[2%] z-20 animate-bounce opacity-80 pointer-events-none">
+                <Rocket className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
+              </div>
+              <div className="absolute top-[34%] right-[2%] z-20 animate-[pulse_3.5s_infinite] opacity-80 pointer-events-none">
+                <Brain className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
+              </div>
+              <div className="absolute top-[16%] left-[24%] z-20 opacity-80 pointer-events-none">
+                <Cloud className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
               </div>
             </div>
           </div>
-        </Container>
-      </section>
+        </div>
+      </Container>
+    </section>
 
-      {/* Hero Statistics Ribbon Bar */}
-      <div className="bg-[#02ACEA] py-5 border-t border-b border-white/5 shadow-md">
-        <Container>
-          <div className="flex flex-col md:flex-row justify-around items-center gap-6 md:gap-4 text-white font-semibold">
-            {/* Stat 1 */}
-            <div className="flex items-center space-x-3 group cursor-default">
-              <Clock className="h-5 w-5 text-white group-hover:scale-110 transition-transform duration-200" />
-              <span className="text-sm md:text-base tracking-wide text-white">15 Years of Experience</span>
-            </div>
+      {/* Hero Statistics Ribbon Bar */ }
+  <div className="bg-[#02ACEA] py-5 border-t border-b border-white/5 shadow-md">
+    <Container>
+      <div className="flex flex-col md:flex-row justify-around items-center gap-6 md:gap-4 text-white font-semibold">
+        {/* Stat 1 */}
+        <div className="flex items-center space-x-3 group cursor-default">
+          <Clock className="h-5 w-5 text-white group-hover:scale-110 transition-transform duration-200" />
+          <span className="text-sm md:text-base tracking-wide text-white">15 Years of Experience</span>
+        </div>
 
-            {/* Stat 2 */}
-            <div className="flex items-center space-x-3 group cursor-default">
-              <ShieldCheck className="h-5 w-5 text-white group-hover:scale-110 transition-transform duration-200" />
-              <span className="text-sm md:text-base tracking-wide text-white">20+ GP Practices</span>
-            </div>
+        {/* Stat 2 */}
+        <div className="flex items-center space-x-3 group cursor-default">
+          <ShieldCheck className="h-5 w-5 text-white group-hover:scale-110 transition-transform duration-200" />
+          <span className="text-sm md:text-base tracking-wide text-white">20+ GP Practices</span>
+        </div>
 
-            {/* Stat 3 */}
-            <div className="flex items-center space-x-3 group cursor-default">
-              <Award className="h-5 w-5 text-white fill-white/20 group-hover:scale-110 transition-transform duration-200" />
-              <span className="text-sm md:text-base tracking-wide text-white">5 Industry Awards</span>
-            </div>
-          </div>
-        </Container>
+        {/* Stat 3 */}
+        <div className="flex items-center space-x-3 group cursor-default">
+          <Award className="h-5 w-5 text-white fill-white/20 group-hover:scale-110 transition-transform duration-200" />
+          <span className="text-sm md:text-base tracking-wide text-white">5 Industry Awards</span>
+        </div>
+      </div>
+    </Container>
+  </div>
+
+  {/* 2. PARTNERS SECTION */ }
+  <PartnerLogos />
+
+  {/* 3. CORE SOLUTIONS OVERVIEW */ }
+  <section className="py-20 bg-white">
+    <Container>
+      <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <span className="text-xs font-bold tracking-widest text-brand-blue uppercase">
+          WORKFLOW SOLUTIONS
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-navy">
+          Streamline & automate your workflows manually
+        </h2>
+        <p className="text-sm text-slate-500">
+          Transform clinical and operational administration into automated pipelines. Choose from our key services built specifically for NHS frameworks.
+        </p>
       </div>
 
-      {/* 2. PARTNERS SECTION */}
-      <PartnerLogos />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {quickSolutions.map((sol) => (
+          <Card
+            key={sol.name}
+            onClick={() => window.location.href = sol.href}
+            className="group flex flex-col justify-between min-h-[220px] transition-all duration-300 hover:bg-gradient-to-b hover:from-[#0F1E36] hover:to-[#02ACEA] hover:border-transparent hover:shadow-xl"
+          >
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-slate-300 group-hover:text-white/60 transition-colors">{sol.num}</span>
+                <span className="w-2.5 h-2.5 rounded-full bg-brand-cyan group-hover:bg-white transition-colors" />
+              </div>
+              <h3 className="text-base font-bold text-brand-navy group-hover:text-white transition-colors">
+                {sol.name}
+              </h3>
+              <p className="text-xs text-slate-500 group-hover:text-slate-200 leading-relaxed transition-colors">
+                {sol.desc}
+              </p>
+            </div>
+            <div className="pt-4 flex items-center text-xs font-semibold text-brand-blue group-hover:text-white transition-colors">
+              Learn more <ArrowRight className="ml-1 h-3.5 w-3.5 text-brand-blue group-hover:text-white transition-colors" />
+            </div>
+          </Card>
+        ))}
+      </div>
 
-      {/* 3. CORE SOLUTIONS OVERVIEW */}
-      <section className="py-20 bg-white">
-        <Container>
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-bold tracking-widest text-brand-blue uppercase">
-              WORKFLOW SOLUTIONS
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-navy">
-              Streamline & automate your workflows manually
-            </h2>
-            <p className="text-sm text-slate-500">
-              Transform clinical and operational administration into automated pipelines. Choose from our key services built specifically for NHS frameworks.
-            </p>
-          </div>
+      <div className="text-center mt-12">
+        <Button href="/solutions" variant="outline" size="md">
+          View All 9 Solutions
+        </Button>
+      </div>
+    </Container>
+  </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickSolutions.map((sol) => (
-              <Card
-                key={sol.name}
-                onClick={() => window.location.href = sol.href}
-                className="group flex flex-col justify-between min-h-[220px] transition-all duration-300 hover:bg-gradient-to-b hover:from-[#0F1E36] hover:to-[#02ACEA] hover:border-transparent hover:shadow-xl"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-slate-300 group-hover:text-white/60 transition-colors">{sol.num}</span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-brand-cyan group-hover:bg-white transition-colors" />
-                  </div>
-                  <h3 className="text-base font-bold text-brand-navy group-hover:text-white transition-colors">
-                    {sol.name}
-                  </h3>
-                  <p className="text-xs text-slate-500 group-hover:text-slate-200 leading-relaxed transition-colors">
-                    {sol.desc}
-                  </p>
-                </div>
-                <div className="pt-4 flex items-center text-xs font-semibold text-brand-blue group-hover:text-white transition-colors">
-                  Learn more <ArrowRight className="ml-1 h-3.5 w-3.5 text-brand-blue group-hover:text-white transition-colors" />
-                </div>
-              </Card>
+  {/* Surgeries & NHS Partners Grid */ }
+  <SurgeriesGrid />
+
+  {/* 4. DEEP NAVY PLATFORM WORKFLOW */ }
+  <section className="bg-brand-navy text-white py-20 lg:py-28 relative overflow-hidden rounded-[32px] sm:rounded-[48px] mx-4 sm:mx-6 lg:mx-8 my-10 shadow-2xl">
+    <Container>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+        {/* Dark Section Content */}
+        <div className="lg:col-span-6 space-y-6">
+          <span className="text-xs font-bold tracking-widest text-brand-cyan uppercase">
+            HEALTHCARE RPA PLATFORM
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+            An intelligent platform for your entire medical workflow
+          </h2>
+          <p className="text-sm text-slate-300 leading-relaxed">
+            Clear clinical backlogs and relieve administrative teams by automating complex tasks in patient record routing, repeat prescribing, and policy compliance verification.
+          </p>
+
+          <ul className="space-y-3 pt-2">
+            {[
+              "Clinician-led rules validation ensures absolute patient safety",
+              "Directly routes documents into GP, Docman, and clinic folders",
+              "Simultaneous processing of multiple clinical sites in parallel",
+              "Advanced data dashboards and activity logging built-in"
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2 text-sm text-slate-200">
+                <Check className="h-5 w-5 text-brand-cyan flex-shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          <div className="text-center mt-12">
-            <Button href="/solutions" variant="outline" size="md">
-              View All 9 Solutions
+          <div className="flex flex-wrap items-center gap-4 pt-4">
+            <Button href="/demo" variant="accent" size="md">
+              Request a Demo
+            </Button>
+            <Button href="/solutions" variant="outline-white" size="md">
+              Explore Solutions
             </Button>
           </div>
-        </Container>
-      </section>
+        </div>
 
-      {/* Surgeries & NHS Partners Grid */}
-      <SurgeriesGrid />
-
-      {/* 4. DEEP NAVY PLATFORM WORKFLOW */}
-      <section className="bg-brand-navy text-white py-20 lg:py-28 relative overflow-hidden rounded-[32px] sm:rounded-[48px] mx-4 sm:mx-6 lg:mx-8 my-10 shadow-2xl">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-
-            {/* Dark Section Content */}
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold tracking-widest text-brand-cyan uppercase">
-                HEALTHCARE RPA PLATFORM
+        {/* Dark Section Mockup UI */}
+        <div className="lg:col-span-6">
+          <div className="bg-[#080d16] border border-white/10 rounded-2xl p-6 shadow-2xl space-y-6">
+            <div className="flex items-center justify-between border-b border-white/5 pb-4">
+              <div className="flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-brand-cyan" />
+                <span className="text-xs font-bold text-white tracking-wider">DOCMAN ROUTING METRICS</span>
+              </div>
+              <span className="text-[10px] text-brand-cyan bg-brand-cyan/10 px-2.5 py-0.5 rounded-full font-semibold">
+                ACTIVE MONITORING
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-                An intelligent platform for your entire medical workflow
-              </h2>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                Clear clinical backlogs and relieve administrative teams by automating complex tasks in patient record routing, repeat prescribing, and policy compliance verification.
-              </p>
+            </div>
 
-              <ul className="space-y-3 pt-2">
-                {[
-                  "Clinician-led rules validation ensures absolute patient safety",
-                  "Directly routes documents into GP, Docman, and clinic folders",
-                  "Simultaneous processing of multiple clinical sites in parallel",
-                  "Advanced data dashboards and activity logging built-in"
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-slate-200">
-                    <Check className="h-5 w-5 text-brand-cyan flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-wrap items-center gap-4 pt-4">
-                <Button href="/demo" variant="accent" size="md">
-                  Request a Demo
-                </Button>
-                <Button href="/solutions" variant="outline-white" size="md">
-                  Explore Solutions
-                </Button>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
+                <p className="text-2xl font-bold text-white">124</p>
+                <p className="text-[10px] text-slate-400 uppercase mt-1">INCOMING</p>
+              </div>
+              <div className="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
+                <p className="text-2xl font-bold text-brand-cyan">96</p>
+                <p className="text-[10px] text-slate-400 uppercase mt-1">PROCESSED</p>
+              </div>
+              <div className="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
+                <p className="text-2xl font-bold text-amber-400">18</p>
+                <p className="text-[10px] text-slate-400 uppercase mt-1">PENDING REVIEW</p>
               </div>
             </div>
 
-            {/* Dark Section Mockup UI */}
-            <div className="lg:col-span-6">
-              <div className="bg-[#080d16] border border-white/10 rounded-2xl p-6 shadow-2xl space-y-6">
-                <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-brand-cyan" />
-                    <span className="text-xs font-bold text-white tracking-wider">DOCMAN ROUTING METRICS</span>
-                  </div>
-                  <span className="text-[10px] text-brand-cyan bg-brand-cyan/10 px-2.5 py-0.5 rounded-full font-semibold">
-                    ACTIVE MONITORING
-                  </span>
+            <div className="space-y-2">
+              <p className="text-xs font-bold text-white">Latest Routing Streams</p>
+              <div className="text-[11px] font-mono space-y-1.5 text-slate-400">
+                <div className="flex justify-between py-1 border-b border-white/5">
+                  <span className="text-slate-300">Letter_49392.pdf</span>
+                  <span className="text-brand-cyan">→ Extracted & Saved (Accuracy: 100%)</span>
                 </div>
-
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
-                    <p className="text-2xl font-bold text-white">124</p>
-                    <p className="text-[10px] text-slate-400 uppercase mt-1">INCOMING</p>
-                  </div>
-                  <div className="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
-                    <p className="text-2xl font-bold text-brand-cyan">96</p>
-                    <p className="text-[10px] text-slate-400 uppercase mt-1">PROCESSED</p>
-                  </div>
-                  <div className="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
-                    <p className="text-2xl font-bold text-amber-400">18</p>
-                    <p className="text-[10px] text-slate-400 uppercase mt-1">PENDING REVIEW</p>
-                  </div>
+                <div className="flex justify-between py-1 border-b border-white/5">
+                  <span className="text-slate-300">Referral_8849.pdf</span>
+                  <span className="text-brand-cyan">→ Routed to Admin Staff</span>
                 </div>
-
-                <div className="space-y-2">
-                  <p className="text-xs font-bold text-white">Latest Routing Streams</p>
-                  <div className="text-[11px] font-mono space-y-1.5 text-slate-400">
-                    <div className="flex justify-between py-1 border-b border-white/5">
-                      <span className="text-slate-300">Letter_49392.pdf</span>
-                      <span className="text-brand-cyan">→ Extracted & Saved (Accuracy: 100%)</span>
-                    </div>
-                    <div className="flex justify-between py-1 border-b border-white/5">
-                      <span className="text-slate-300">Referral_8849.pdf</span>
-                      <span className="text-brand-cyan">→ Routed to Admin Staff</span>
-                    </div>
-                    <div className="flex justify-between py-1">
-                      <span className="text-slate-300">Presc_90192.json</span>
-                      <span className="text-amber-400">→ Pending Clinician Approval</span>
-                    </div>
-                  </div>
+                <div className="flex justify-between py-1">
+                  <span className="text-slate-300">Presc_90192.json</span>
+                  <span className="text-amber-400">→ Pending Clinician Approval</span>
                 </div>
-
               </div>
             </div>
 
           </div>
-        </Container>
-      </section>
+        </div>
 
-      {/* 5. STATISTICS SECTION */}
-      <section className="py-16 bg-slate-50 border-b border-brand-border">
-        <Container>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
-            {stats.map((item) => (
-              <div
-                key={item.label}
-                className="bg-white border border-brand-border p-6 rounded-2xl shadow-[0_2px_8px_rgba(15,23,42,0.02)]"
-              >
-                <p className="text-3xl sm:text-4xl font-extrabold text-brand-navy mb-1">
-                  {item.number}
-                </p>
-                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      </div>
+    </Container>
+  </section>
 
-      {/* 6. FEATURE GRID SECTION */}
-      <section className="py-20 bg-white">
-        <Container>
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-bold tracking-widest text-brand-blue uppercase">
-              WHY OVOTECH
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-navy">
-              Security, compliance and clinical safety first
-            </h2>
-            <p className="text-sm text-slate-500">
-              Ovotech ensures clinical governance is maintained throughout every step.
+  {/* 5. STATISTICS SECTION */ }
+  <section className="py-16 bg-slate-50 border-b border-brand-border">
+    <Container>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+        {stats.map((item) => (
+          <div
+            key={item.label}
+            className="bg-white border border-brand-border p-6 rounded-2xl shadow-[0_2px_8px_rgba(15,23,42,0.02)]"
+          >
+            <p className="text-3xl sm:text-4xl font-extrabold text-brand-navy mb-1">
+              {item.number}
+            </p>
+            <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+              {item.label}
             </p>
           </div>
+        ))}
+      </div>
+    </Container>
+  </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {keyFeatures.map((feat) => {
-              const Icon = feat.icon;
-              return (
-                <div key={feat.title} className="space-y-4 text-center md:text-left">
-                  <div className="inline-flex p-3 bg-brand-blue/10 rounded-xl text-brand-blue mx-auto md:mx-0">
-                    <Icon className="h-6 w-6 text-brand-cyan" />
-                  </div>
-                  <h3 className="text-lg font-bold text-brand-navy">
-                    {feat.title}
-                  </h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    {feat.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </Container>
-      </section>
+  {/* 6. FEATURE GRID SECTION */ }
+  <section className="py-20 bg-white">
+    <Container>
+      <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <span className="text-xs font-bold tracking-widest text-brand-blue uppercase">
+          WHY OVOTECH
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-navy">
+          Security, compliance and clinical safety first
+        </h2>
+        <p className="text-sm text-slate-500">
+          Ovotech ensures clinical governance is maintained throughout every step.
+        </p>
+      </div>
 
-      {/* Work Process Section */}
-      <WorkProcess />
-
-      {/* 7. SUPPORT SECTION */}
-      <section className="py-20 bg-slate-50 border-t border-b border-brand-border">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-            {/* Support Copy */}
-            <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-bold tracking-widest text-brand-blue uppercase">
-                DEDICATED TEAMS
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-navy">
-                Support when you need it
-              </h2>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                We bridge the gap between high-performance software engineering and clinical validation, ensuring your operations never experience downtime.
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {keyFeatures.map((feat) => {
+          const Icon = feat.icon;
+          return (
+            <div key={feat.title} className="space-y-4 text-center md:text-left">
+              <div className="inline-flex p-3 bg-brand-blue/10 rounded-xl text-brand-blue mx-auto md:mx-0">
+                <Icon className="h-6 w-6 text-brand-cyan" />
+              </div>
+              <h3 className="text-lg font-bold text-brand-navy">
+                {feat.title}
+              </h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                {feat.desc}
               </p>
-
-              <div className="space-y-4 pt-2">
-                <div className="flex items-center gap-3 text-slate-600 text-sm">
-                  <Phone className="h-5 w-5 text-brand-cyan" />
-                  <span>0161 820 1123</span>
-                </div>
-                <div className="flex items-center gap-3 text-slate-600 text-sm">
-                  <Mail className="h-5 w-5 text-brand-cyan" />
-                  <span>ovotech.services@nhs.net</span>
-                </div>
-              </div>
-
-              <div className="pt-2">
-                <Button href="/support" variant="primary" size="md">
-                  Contact Support
-                </Button>
-              </div>
             </div>
+          );
+        })}
+      </div>
+    </Container>
+  </section>
 
-            {/* Support Cards */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <Card hoverEffect={false} className="space-y-4 border-slate-200">
-                <div className="p-2.5 bg-brand-blue/10 text-brand-blue w-fit rounded-lg">
-                  <Users className="h-6 w-6 text-brand-cyan" />
-                </div>
-                <h3 className="text-lg font-bold text-brand-navy">Technical Support</h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Professional Software Developers standing by to assist with software customization, integrations, and server dashboard configurations.
-                </p>
-              </Card>
+  {/* Work Process Section */ }
+  <WorkProcess />
 
-              <Card hoverEffect={false} className="space-y-4 border-slate-200">
-                <div className="p-2.5 bg-brand-blue/10 text-brand-blue w-fit rounded-lg">
-                  <Activity className="h-6 w-6 text-brand-cyan" />
-                </div>
-                <h3 className="text-lg font-bold text-brand-navy">Healthcare Support</h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Consultant Medical Professionals who review rules templates, clinical guidelines, and coordinate clinical safety compliance assessments.
-                </p>
-              </Card>
+  {/* 7. SUPPORT SECTION */ }
+  <section className="py-20 bg-slate-50 border-t border-b border-brand-border">
+    <Container>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        {/* Support Copy */}
+        <div className="lg:col-span-5 space-y-6">
+          <span className="text-xs font-bold tracking-widest text-brand-blue uppercase">
+            DEDICATED TEAMS
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-navy">
+            Support when you need it
+          </h2>
+          <p className="text-sm text-slate-500 leading-relaxed">
+            We bridge the gap between high-performance software engineering and clinical validation, ensuring your operations never experience downtime.
+          </p>
+
+          <div className="space-y-4 pt-2">
+            <div className="flex items-center gap-3 text-slate-600 text-sm">
+              <Phone className="h-5 w-5 text-brand-cyan" />
+              <span>0161 820 1123</span>
             </div>
-
+            <div className="flex items-center gap-3 text-slate-600 text-sm">
+              <Mail className="h-5 w-5 text-brand-cyan" />
+              <span>ovotech.services@nhs.net</span>
+            </div>
           </div>
-        </Container>
-      </section>
 
-      {/* 8. CTA / TRANSFORMATION */}
-      <CTASection />
+          <div className="pt-2">
+            <Button href="/support" variant="primary" size="md">
+              Contact Support
+            </Button>
+          </div>
+        </div>
 
-    </div>
+        {/* Support Cards */}
+        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <Card hoverEffect={false} className="space-y-4 border-slate-200">
+            <div className="p-2.5 bg-brand-blue/10 text-brand-blue w-fit rounded-lg">
+              <Users className="h-6 w-6 text-brand-cyan" />
+            </div>
+            <h3 className="text-lg font-bold text-brand-navy">Technical Support</h3>
+            <p className="text-xs text-slate-500 leading-relaxed">
+              Professional Software Developers standing by to assist with software customization, integrations, and server dashboard configurations.
+            </p>
+          </Card>
+
+          <Card hoverEffect={false} className="space-y-4 border-slate-200">
+            <div className="p-2.5 bg-brand-blue/10 text-brand-blue w-fit rounded-lg">
+              <Activity className="h-6 w-6 text-brand-cyan" />
+            </div>
+            <h3 className="text-lg font-bold text-brand-navy">Healthcare Support</h3>
+            <p className="text-xs text-slate-500 leading-relaxed">
+              Consultant Medical Professionals who review rules templates, clinical guidelines, and coordinate clinical safety compliance assessments.
+            </p>
+          </Card>
+        </div>
+
+      </div>
+    </Container>
+  </section>
+
+  {/* 8. CTA / TRANSFORMATION */ }
+  <CTASection />
+
+    </div >
   );
 }
