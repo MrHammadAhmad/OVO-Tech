@@ -298,8 +298,8 @@ export default function HomePage() {
             </div>
 
             {/* Hero Visual Mockup (Right) */}
-            <div className="lg:col-span-5 relative flex items-end justify-center self-end">
-              <div className="relative w-96 h-96 sm:w-[460px] sm:h-[460px] md:w-[500px] md:h-[500px] lg:w-[500px] lg:h-[500px] xl:w-[620px] xl:h-[620px]">
+            <div className="lg:col-span-5 relative flex items-center justify-center">
+              <div className="relative w-88 h-88 sm:w-96 sm:h-96 md:w-[440px] md:h-[440px] lg:w-[450px] lg:h-[450px] xl:w-[560px] xl:h-[560px] transform lg:-translate-y-2 xl:-translate-y-3">
                 {/* SVG Static Curved Text & Circle Backdrop */}
                 <div className="absolute inset-0 z-0 select-none">
                   <svg className="w-full h-full filter drop-shadow-[0_8px_32px_rgba(16,32,57,0.3)]" viewBox="0 0 200 200">
@@ -322,6 +322,18 @@ export default function HomePage() {
                     <circle cx="100" cy="100" r="68" fill="#02ACEA" />
 
                     {/* Left Text (Screenshot 3 text) */}
+                    <text className="text-[4.2px] font-black fill-[#0F1E36] tracking-[0.25em] uppercase">
+                      <textPath href="#leftPath" startOffset="50%" textAnchor="middle">
+                        CLINICALLY COMPLIANT • SECURE & TRUSTED • RPA FOR HEALTHCARE
+                      </textPath>
+                    </text>
+
+                    {/* Right Text (Screenshot 4 text) */}
+                    <text className="text-[4.2px] font-black fill-[#0F1E36] tracking-[0.25em] uppercase">
+                      <textPath href="#rightPath" startOffset="50%" textAnchor="middle">
+                        DESIGNED FOR CLINICIANS • BUILT FOR SAFETY
+                      </textPath>
+                    </text>
                   </svg>
                 </div>
 
