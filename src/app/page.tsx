@@ -220,7 +220,7 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden">
       {/* 1. HERO SECTION */}
-      <section className="relative pt-6 pb-12 lg:pt-10 lg:pb-16 bg-[#f8fafc] border-b border-brand-border overflow-hidden">
+      <section className="relative pt-6 pb-0 lg:pt-10 lg:pb-0 bg-[#f8fafc] border-b border-brand-border overflow-hidden">
         {/* Glow Effects */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -298,42 +298,12 @@ export default function HomePage() {
             </div>
 
             {/* Hero Visual Mockup (Right) */}
-            <div className="lg:col-span-5 relative flex items-center justify-center">
-              <div className="relative w-88 h-88 sm:w-96 sm:h-96 md:w-[440px] md:h-[440px] lg:w-[450px] lg:h-[450px] xl:w-[560px] xl:h-[560px] transform lg:-translate-y-2 xl:-translate-y-3">
-                {/* SVG Static Curved Text & Circle Backdrop */}
+            <div className="lg:col-span-5 relative flex items-end justify-center self-end">
+              <div className="relative w-96 h-96 sm:w-[460px] sm:h-[460px] md:w-[500px] md:h-[500px] lg:w-[500px] lg:h-[500px] xl:w-[620px] xl:h-[620px]">
+                {/* SVG Static Circle Backdrop */}
                 <div className="absolute inset-0 z-0 select-none">
                   <svg className="w-full h-full filter drop-shadow-[0_8px_32px_rgba(16,32,57,0.3)]" viewBox="0 0 200 200">
-                    {/* Invisible Left Curve Path (starts bottom-left, goes to top-left) */}
-                    <path
-                      id="leftPath"
-                      d="M 46.4,145 A 70,70 0 0,1 46.4,55"
-                      fill="none"
-                      stroke="none"
-                    />
-                    {/* Invisible Right Curve Path (starts top-right, goes to bottom-right) */}
-                    <path
-                      id="rightPath"
-                      d="M 153.6,55 A 70,70 0 0,1 153.6,145"
-                      fill="none"
-                      stroke="none"
-                    />
-
-                    {/* Solid Purple Circle Backdrop - concentric with curves */}
-                    <circle cx="100" cy="100" r="68" fill="#02ACEA" />
-
-                    {/* Left Text (Screenshot 3 text) */}
-                    <text className="text-[4.2px] font-black fill-[#0F1E36] tracking-[0.25em] uppercase">
-                      <textPath href="#leftPath" startOffset="50%" textAnchor="middle">
-                        CLINICALLY COMPLIANT • SECURE & TRUSTED • RPA FOR HEALTHCARE
-                      </textPath>
-                    </text>
-
-                    {/* Right Text (Screenshot 4 text) */}
-                    <text className="text-[4.2px] font-black fill-[#0F1E36] tracking-[0.25em] uppercase">
-                      <textPath href="#rightPath" startOffset="50%" textAnchor="middle">
-                        DESIGNED FOR CLINICIANS • BUILT FOR SAFETY
-                      </textPath>
-                    </text>
+                    <circle cx="100" cy="100" r="80" fill="#02ACEA" />
                   </svg>
                 </div>
 
@@ -343,14 +313,14 @@ export default function HomePage() {
                 </div>
 
                 {/* Floating Outline Icons matching reference (no white boxes) */}
-                <div className="absolute top-[34%] left-[2%] z-20 animate-bounce opacity-80 pointer-events-none">
-                  <Rocket className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
+                <div className="absolute top-[34%] left-[-8%] z-20 animate-bounce opacity-85 pointer-events-none">
+                  <Rocket className="h-6 w-6 text-[#0F1E36]" strokeWidth={1.5} />
                 </div>
-                <div className="absolute top-[34%] right-[2%] z-20 animate-[pulse_3.5s_infinite] opacity-80 pointer-events-none">
-                  <Brain className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
+                <div className="absolute top-[34%] right-[-8%] z-20 animate-[pulse_3.5s_infinite] opacity-85 pointer-events-none">
+                  <Brain className="h-6 w-6 text-[#0F1E36]" strokeWidth={1.5} />
                 </div>
-                <div className="absolute top-[16%] left-[24%] z-20 opacity-80 pointer-events-none">
-                  <Cloud className="h-6 w-6 text-[#02ACEA]" strokeWidth={1.5} />
+                <div className="absolute top-[6%] left-[16%] z-20 opacity-85 pointer-events-none">
+                  <Cloud className="h-6 w-6 text-[#0F1E36]" strokeWidth={1.5} />
                 </div>
               </div>
             </div>
