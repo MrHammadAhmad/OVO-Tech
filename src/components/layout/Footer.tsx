@@ -40,10 +40,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand block */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold tracking-tight text-white">
-                OVO<span className="text-brand-cyan">TECH</span>
-              </span>
+            <Link href="/" className="flex items-center">
+              <img 
+                src="/logo-footer.png" 
+                alt="OVO TECH" 
+                className="h-8 w-auto object-contain select-none" 
+              />
             </Link>
             <p className="text-sm leading-relaxed max-w-sm text-slate-400">
               Healthcare AI and RPA for modern healthcare workflows. Transforming repetitive processes into streamlined, compliant automation platforms.

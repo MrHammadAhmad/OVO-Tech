@@ -105,10 +105,12 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold tracking-tight text-brand-navy">
-                OVO<span className="text-brand-cyan">TECH</span>
-              </span>
+            <Link href="/" className="flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="OVO TECH" 
+                className="h-8 w-auto object-contain select-none" 
+              />
             </Link>
           </div>
 
